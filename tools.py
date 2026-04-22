@@ -39,7 +39,7 @@ def mock_lead_capture(name: str, email: str, platform: str) -> dict:
 
     # Simulate the print output required by the assignment spec
     print(f"\n{'='*50}")
-    print(f"✅ Lead captured successfully: {name}, {email}, {platform}")
+    print(f" Lead captured successfully: {name}, {email}, {platform}")
     print(f"{'='*50}\n")
 
     return {
