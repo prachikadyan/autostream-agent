@@ -172,7 +172,7 @@ def collect_lead_details(state: AgentState) -> AgentState:
         # Basic sanity check — name should be 2-50 chars
         if 2 <= len(extracted) <= 50 and extracted.lower() not in ["unknown", "none", ""]:
             lead_name = extracted
-            reply = f"Great, {lead_name}! 😊 What's your email address?"
+            reply = f"Great, {lead_name}!  What's your email address?"
             next_stage = "collecting_email"
         else:
             reply = "I didn't quite catch your name — could you share it again?"
@@ -348,7 +348,7 @@ def run_agent():
     }
 
     # Warm greeting
-    greeting = "Hey there! 👋 I'm the AutoStream assistant. I can help you with our plans, features, and getting started. What can I help you with today?"
+    greeting = "Hey there!  I'm the AutoStream assistant. I can help you with our plans, features, and getting started. What can I help you with today?"
     print(f"AutoStream: {greeting}\n")
 
     while True:
@@ -390,7 +390,7 @@ def run_agent():
                 break
 
         except KeyboardInterrupt:
-            print("\n\nGoodbye! 👋")
+            print("\n\nGoodbye! ")
             break
         except Exception as e:
             print(f"\n[Error]: {e}")
