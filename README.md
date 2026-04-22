@@ -5,7 +5,7 @@ A production-grade conversational AI agent that qualifies leads through natural 
 
 ---
 
-## 🗂 Project Structure
+## Project Structure
 
 ```
 autostream_agent/
@@ -20,7 +20,7 @@ autostream_agent/
 
 ---
 
-## ⚡ Quick Start
+##  Quick Start
 
 ### 1. Clone & Install
 
@@ -52,7 +52,7 @@ python agent.py
 ### Example Conversation
 
 ```
-AutoStream: Hey there! 👋 I can help you with our plans, features, and getting started.
+AutoStream: Hey there!  I can help you with our plans, features, and getting started.
 
 You: Hi, what plans do you offer?
 
@@ -75,14 +75,14 @@ AutoStream: Perfect! And which platform are you mainly creating for?
 
 You: YouTube
 
-✅ Lead captured successfully: Alex Johnson, alex@example.com, YouTube
+ Lead captured successfully: Alex Johnson, alex@example.com, YouTube
 
-AutoStream: 🎉 You're all set, Alex! Check your inbox — your free trial link is on the way!
+AutoStream:  You're all set, Alex! Check your inbox — your free trial link is on the way!
 ```
 
 ---
 
-## 🏗 Architecture (~200 words)
+##  Architecture (~200 words)
 
 ### Why LangGraph?
 
@@ -109,8 +109,7 @@ generate_response   execute_lead_capture (when all 3 fields are filled)
 The `collect_lead_details` node advances one field per turn, extracting values via LLM parsing (name) or regex (email) before moving to the next sub-stage. The `execute_lead_capture` node fires **only** after all three values are confirmed — never prematurely.
 
 ---
-
-## 📱 WhatsApp Deployment via Webhooks
+##  WhatsApp Deployment via Webhooks
 
 ### Overview
 
@@ -185,28 +184,16 @@ async def receive_message(request: Request):
 
 ---
 
-## ✅ Evaluation Checklist
+##  Evaluation Checklist
 
 | Requirement | Status |
 |---|---|
-| Intent classification (3 categories) | ✅ |
-| RAG over local knowledge base | ✅ |
-| State retained across 5–6 turns | ✅ (MemorySaver + thread_id) |
-| Lead collection (name + email + platform) | ✅ |
-| Tool fires only after all 3 values collected | ✅ |
-| LangGraph framework | ✅ |
-| Claude 3 Haiku LLM | ✅ |
-| Clean code structure | ✅ |
+| Intent classification (3 categories) | |
+| RAG over local knowledge base | |
+| State retained across 5–6 turns |  (MemorySaver + thread_id) |
+| Lead collection (name + email + platform) | |
+| Tool fires only after all 3 values collected |  |
+| LangGraph framework |  |
+| Claude 3 Haiku LLM | 
+| Clean code structure | |
 
----
-
-## 🛠 Tech Stack
-
-| Component | Technology |
-|---|---|
-| LLM | Claude 3 Haiku (Anthropic) |
-| Agent Framework | LangGraph 0.4+ |
-| State Persistence | LangGraph MemorySaver |
-| RAG | Keyword-based retrieval over local JSON |
-| Lead Tool | mock_lead_capture() |
-| Language | Python 3.9+ |
