@@ -1,12 +1,4 @@
-"""
-agent.py — AutoStream Conversational AI Agent
-Built with LangGraph for state management + Claude 3 Haiku as LLM.
 
-Architecture:
-  - StateGraph retains memory across turns via MemorySaver checkpointer
-  - Each turn: classify intent → retrieve context → generate response / collect lead
-  - Lead capture tool fires only after name + email + platform are all collected
-"""
 
 import os
 import operator
